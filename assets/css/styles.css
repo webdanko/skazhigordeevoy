@@ -1,0 +1,11 @@
+.hero-block {
+  @apply aspect-[21/9] overflow-clip rounded-2xl;
+}
+
+.hero-block__bg {
+  width: 100%;
+  height: 100%;
+  background-image: url("~/assets/images/gordeeva.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+}
