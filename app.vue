@@ -208,7 +208,7 @@ onMounted(() => {
 </template>
 
 <style lang="postcss">
-@import url("~assets/css/styles.css");
+@import url("~/assets/css/styles.css");
 
 html{
   font-size: 18px;
