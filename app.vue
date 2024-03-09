@@ -1,3 +1,13 @@
+<script setup>
+import { onMounted } from 'vue'
+import { initFlowbite } from 'flowbite'
+
+// initialize components based on data attribute selectors
+onMounted(() => {
+  initFlowbite();
+})
+</script>
+
 <template>
 
   <main class="container max-w-screen-lg m-auto p-5">
@@ -101,42 +111,42 @@
         </div>
       </section>
 
-      <section id="paypal-checkout" />
-
-      <section hidden>
+      <section>
         <h3 class="font-bold text-3xl text-left leading-tight mb-8">Разовые пожертвования</h3>
+        <div class="border-l-2 pl-5 mb-8">
+          <p>Подписка -- это здорово, но не у всех и не всегда есть на это возможность. Мы будем благодарны любому
+            вашему вкладу в нашу работу!</p>
+        </div>
         <div class="onetime">
           <div class="onetime__item">
             <a target="_blank" href="https://t.me/tribute/app?startapp=donation_3759"
                class="onetime-button onetime-button--telegram">
-              <svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clip-path="url(#clip0_2891_22123)" fill="#fff">
-                  <path
-                      d="M1.828 26.74c-.049.031-.067.062-.036.062.03 0 .018.042-.025.091-.036.049-.055.116-.03.159a.083.083 0 0 1-.03.115c-.05.03-.08.134-.08.238 0 .103-.018.189-.042.189-.037 0-.05.048-.074.304-.006.067-.036.122-.067.122-.024 0-.03.024-.012.061.019.03-.006.134-.055.232-.048.097-.079.194-.06.213.018.018-.007.11-.055.207-.049.091-.073.207-.061.243.018.043 0 .08-.043.08-.036 0-.055.024-.03.054.018.03 0 .08-.037.098-.03.024-.049.085-.024.14.018.049.006.11-.03.134-.037.024-.074.122-.08.22-.006.097-.03.188-.055.206-.091.073-.633 2.54-.572 2.601.018.025.012.067-.019.104-.03.037-.103.438-.164.89-.091.639-.116 1.2-.116 2.527.006 1.505.019 1.797.14 2.486.323 1.803.896 3.307 1.742 4.562.476.713.555.81 1.225 1.48.664.664.761.75 1.474 1.23 1.346.902 3.015 1.56 4.86 1.907 2.249.414 5.288.414 7.798 0 3.058-.511 6.353-1.669 9.076-3.192.201-.11.506-.28.67-.371.408-.226 1.56-.975 2.467-1.596.445-.305 1.401-1.06 2.04-1.602.738-.628 2.45-2.284 2.078-2.004-.085.06-.11.06-.073.006a.456.456 0 0 1 .195-.134.395.395 0 0 0 .188-.165.518.518 0 0 1 .165-.213c.073-.055.128-.134.128-.164 0-.037.018-.061.036-.055.055.024.238-.14.207-.195-.012-.024.055-.104.153-.177.103-.073.182-.17.182-.213 0-.049.068-.128.153-.183.085-.054.152-.14.152-.188 0-.05.03-.092.067-.092.03 0 .043-.03.018-.073-.024-.037-.018-.049.019-.03.06.036.322-.268.322-.384 0-.03.037-.061.08-.061.048-.006.042-.025-.019-.055-.048-.024-2.79-.84-6.085-1.803-4.05-1.188-6.006-1.736-6.024-1.687-.012.042-.043.06-.061.048-.024-.012-.098.05-.159.134-.073.092-.085.134-.03.104.049-.03.006.024-.085.11-.092.091-.159.188-.14.213.018.03-.025.091-.092.134-.06.049-.116.116-.116.146 0 .03-.048.091-.103.14-.073.061-.08.073-.018.049.048-.018.03.012-.043.067-.08.055-.14.14-.14.189 0 .048-.067.146-.158.213-.086.067-.14.134-.122.152.012.019-.025.08-.092.146-.067.067-.103.147-.085.177.024.037.006.061-.024.061-.037 0-.067.043-.067.097 0 .05-.025.08-.049.061-.055-.03-.719.938-.694 1.018.006.03-.007.036-.037.018s-.103.055-.164.164c-.061.11-.177.274-.256.366-.08.097-.122.207-.104.237.024.037.018.05-.012.03-.067-.036-.433.506-.402.598.012.03 0 .042-.024.018-.025-.024-.128.085-.238.244-.177.262-.305.444-1.017 1.474l-.47.67c-.219.323-.554.804-1.053 1.523l-.47.67c-.218.323-.553.804-1.053 1.523l-.469.67c-.22.322-.554.804-1.054 1.523-.463.663-.706 1.01-.956 1.388-.146.208-.268.378-.28.378-.006 0 1.175-2.967 2.631-6.597 1.456-3.624 2.65-6.652 2.65-6.725 0-.079.024-.122.055-.103.055.03.079-.104.06-.275-.012-.042.013-.06.05-.036.06.036.097-.085.072-.268-.012-.043.013-.06.05-.037.06.037.097-.085.072-.268-.012-.042.012-.06.049-.036.061.036.098-.085.073-.268-.012-.043.012-.061.049-.037.06.037.097-.085.073-.268-.012-.042.012-.06.043-.042.067.042.128-.134.091-.256-.024-.055-.713-.073-3.174-.073-1.73 0-3.118-.025-3.088-.049.067-.049.11-.164.116-.335 0-.055.018-.104.036-.104.037 0 .05-.048.073-.304.007-.067.043-.122.073-.122.031 0 .043-.018.025-.037-.025-.018 0-.121.042-.237.05-.11.074-.213.055-.232-.018-.018.006-.11.061-.213.049-.097.08-.195.061-.213-.018-.018.006-.11.055-.207.049-.091.073-.207.06-.25-.017-.036.007-.073.056-.079.042 0 .018-.024-.055-.055-.128-.055-11.555-3.411-11.598-3.411a.533.533 0 0 0-.116.06z"/>
-                  <path
-                      d="M7.684 6.385C6.673 9.893 5.43 14.188 4.931 15.93c-.506 1.742-.938 3.265-.975 3.38-.03.116-.146.5-.25.853l-.243.835c-.03.11-.08.292-.11.396-.03.11-.097.353-.152.536-.049.183-.146.524-.22.761a9.61 9.61 0 0 0-.146.548.903.903 0 0 1-.085.256c-.043.073-.067.159-.06.183.011.024-.013.128-.056.232-.091.243-.402 1.382-.402 1.474 0 .042-.024.079-.055.079-.03 0-.036.024-.018.06.018.031-.006.14-.06.25-.056.104-.086.201-.068.22.018.018-.006.103-.049.195-.103.213-.176.572-.097.524.03-.019 2.68.73 5.884 1.675 3.204.938 5.836 1.7 5.842 1.693.012-.024.213-.743.244-.89.012-.054.11-.377.213-.712.103-.335.195-.664.207-.731a.811.811 0 0 1 .085-.25c.037-.073.055-.146.037-.164-.019-.018.012-.116.067-.225.054-.11.085-.208.067-.226-.019-.018 0-.091.036-.164.037-.067.073-.183.085-.25.007-.067.05-.207.08-.305.055-.146.621-2.07.859-2.924.03-.103.115-.39.182-.64.073-.249.153-.541.183-.639.024-.103.244-.852.487-1.675.238-.822 1.079-3.716 1.858-6.426.786-2.717 2.004-6.92 2.71-9.344.701-2.43 1.28-4.441 1.28-4.465 0-.025-2.869-.05-6.378-.05H9.53L7.684 6.386zm17.424 11.39c-1.322 3.308-2.419 6.067-2.449 6.134-.024.067-.08.201-.122.305-.085.2-.17.414-.25.621-.03.08-.079.201-.11.274-.084.232-.2.5-.255.61a.493.493 0 0 0-.055.17c0 .043 1.09.06 3.229.06h3.228l-.384.561c-.207.305-.493.719-.633.926-.14.207-.36.524-.481.707a3.656 3.656 0 0 1-.262.365 7.543 7.543 0 0 0-.28.39c-.135.201-.366.542-.518.755-.153.22-.36.53-.47.7a2.61 2.61 0 0 1-.243.342c-.03.018-.165.207-.292.414-.128.213-.25.384-.274.384-.025 0-.074.06-.104.134a3.66 3.66 0 0 1-.268.414 1.859 1.859 0 0 0-.207.31c0 .05-.207.336-.378.53-.08.086-.14.184-.14.22 0 .037.024.03.055-.018.043-.067 1.163.237 6.11 1.687 3.331.98 6.079 1.779 6.103 1.779.024 0 .024-.024.006-.061-.018-.03-.018-.061.012-.061.025 0 .146-.146.262-.323a3.45 3.45 0 0 1 .28-.377c.104-.098.463-.64.42-.64-.024 0 .05-.11.153-.244.104-.134.17-.243.146-.243-.024 0 .006-.055.061-.116.122-.134.146-.183.774-1.395 1.322-2.564 2.016-5.214 2.107-7.992.08-2.363-.347-4.459-1.285-6.365-.652-1.316-1.291-2.193-2.363-3.229-1.645-1.596-3.625-2.656-6.11-3.277-.688-.17-2.333-.475-2.57-.47-.025 0-1.127 2.712-2.443 6.02z"/>
-                </g>
-                <defs>
-                  <clipPath id="clip0_2891_22123">
-                    <path fill="#fff" d="M0 0H39.898V48H0z"/>
-                  </clipPath>
-                </defs>
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z"
+                    fill="#fff"/>
               </svg>
               <span>Tribute (Telegram)</span>
             </a>
-            <span class="bg-opacity-15 bg-white text-xs p-2">🇷🇺 Для российских карт</span>
           </div>
           <div class="onetime__item">
             <a target="_blank" href="https://www.paypal.me/katerinagordeeva"
-               class="subscription-button subscription-button--patreon">
-              <svg viewBox="0 0 44 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M18.236.338C11.661 1.16 6.524 4.088 3.545 8.71.616 13.283 0 15.954 0 24.841 0 38.403 2.825 46.16 8.322 47.65c4.829 1.285 7.551-.822 11.25-8.578 3.339-7.038 5.6-8.939 12.688-10.788 6.935-1.798 10.89-6.73 10.89-13.51 0-2.004-.256-4.264-.616-5.035-3.133-7.397-12.226-10.89-24.298-9.4z"
-                    fill="#fff"/>
+               class="onetime-button onetime-button--paypal">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154.728 190.5">
+                <g transform="translate(898.192 276.071)">
+                  <path clip-path="none"
+                        d="M-837.663-237.968a5.49 5.49 0 0 0-5.423 4.633l-9.013 57.15-8.281 52.514-.005.044.01-.044 8.281-52.514c.421-2.669 2.719-4.633 5.42-4.633h26.404c26.573 0 49.127-19.387 53.246-45.658.314-1.996.482-3.973.52-5.924v-.003h-.003c-6.753-3.543-14.683-5.565-23.372-5.565z"
+                        fill="#001c64"/>
+                  <path clip-path="none"
+                        d="M-766.506-232.402c-.037 1.951-.207 3.93-.52 5.926-4.119 26.271-26.673 45.658-53.246 45.658h-26.404c-2.701 0-4.999 1.964-5.42 4.633l-8.281 52.514-5.197 32.947a4.46 4.46 0 0 0 4.405 5.153h28.66a5.49 5.49 0 0 0 5.423-4.633l7.55-47.881c.423-2.669 2.722-4.636 5.423-4.636h16.876c26.573 0 49.124-19.386 53.243-45.655 2.924-18.649-6.46-35.614-22.511-44.026z"
+                        fill="#0070e0"/>
+                  <path clip-path="none"
+                        d="M-870.225-276.071a5.49 5.49 0 0 0-5.423 4.636l-22.489 142.608a4.46 4.46 0 0 0 4.405 5.156h33.351l8.281-52.514 9.013-57.15a5.49 5.49 0 0 1 5.423-4.633h47.782c8.691 0 16.621 2.025 23.375 5.563.46-23.917-19.275-43.666-46.412-43.666z"
+                        fill="#003087"/>
+                </g>
               </svg>
-              <span>Patreon</span>
+              <span>PayPal</span>
             </a>
-            <span class="bg-opacity-15 bg-white text-xs p-2">🌍 Для зарубежных карт</span>
           </div>
         </div>
       </section>
@@ -145,72 +155,55 @@
         <h3 class="font-bold text-3xl text-left leading-tight mb-8">Blockchain — для продвинутых</h3>
         <div class="border-l-2 pl-5 mb-8">
           <p>
-          Являясь всего лишь частью общей картины, предприниматели в сети интернет и по сей день остаются уделом
-          либералов, которые жаждут быть подвергнуты целой серии независимых исследований. Ясность нашей позиции
-          очевидна:
-          сложившаяся структура организации говорит о возможностях экспериментов, поражающих по своей масштабности и
-          грандиозности. Господа, понимание сути ресурсосберегающих технологий позволяет выполнить важные задания по
-          разработке кластеризации усилий.
-        </p>
+            Являясь всего лишь частью общей картины, предприниматели в сети интернет и по сей день остаются уделом
+            либералов, которые жаждут быть подвергнуты целой серии независимых исследований. Ясность нашей позиции
+            очевидна:
+            сложившаяся структура организации говорит о возможностях экспериментов, поражающих по своей масштабности и
+            грандиозности. Господа, понимание сути ресурсосберегающих технологий позволяет выполнить важные задания по
+            разработке кластеризации усилий.
+          </p>
         </div>
         <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6">
           <h5 class="mb-3 text-base font-semibold text-gray-900 md:text-xl">Доступные крипто-счета</h5>
           <p class="text-sm font-normal text-gray-500">Кликните, чтобы скопировать номер счета в буфер обмена.</p>
           <ul class="my-4 space-y-3">
-            <li>
-              <dl class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 hover:shadow">
-                <dt>
-                  <NuxtImg src="/images/usdt-trc20.svg"/>
-                  <span class="flex-1 ms-3 whitespace-nowrap">USDT (TRC20)</span>
-                </dt>
-                <dd>TGsmcDZkUat5QZhWxzLjBGrqSVcX4WgaVM</dd>
-              </dl>
-            </li>
-            <li>
-              <dl class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 hover:shadow">
-                <dt>
-                  <NuxtImg src="/images/usdt-erc20.svg"/>
-                  <span class="flex-1 ms-3 whitespace-nowrap">USDT (ERC20)</span>
-                </dt>
-                <dd>0xeca28b7fce200a35057ec2a2f78bd1420d922839</dd>
-              </dl>
-            </li>
-            <li>
-              <dl class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 hover:shadow">
-                <dt>
-                  <NuxtImg src="/images/btc.svg"/>
-                  <span class="flex-1 ms-3 whitespace-nowrap">BTC</span>
-                </dt>
-                <dd>13jW3KNXXCzioh8dJyoQm7US8qc8jTgVd1</dd>
-              </dl>
-            </li>
-            <li>
-              <dl class="flex items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 hover:shadow">
-                <NuxtImg src="/images/eth.svg"/>
-                <span class="flex-1 ms-3 whitespace-nowrap">Ethereum</span>
-              </dl>
-              <dd>0xeca28b7fce200a35057ec2a2f78bd1420d922839</dd>
+            <li v-for="(account, index) in crypto">
+              <div
+                  class="flex flex-wrap gap-2 items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 hover:shadow">
+                <NuxtImg :src=account.img></NuxtImg>
+                <span class="md:w-1/6 shrink whitespace-nowrap">{{ account.name }}</span>
+                <div class="w-auto grow">
+                  <div class="relative">
+                    <input :id="`crypto-${index}`" type="text"
+                           class="col-span-6 bg-gray-50 border border-gray-300 text-gray-500 text-sm truncate rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" :value=account.value disabled readonly>
+                    <button :data-copy-to-clipboard-target="`crypto-${index}`"
+                            :data-tooltip-target="`tooltip-${index}`"
+                            class="absolute end-2 top-1/2 -translate-y-1/2 text-gray-500 hover:bg-gray-100 rounded-lg p-2 inline-flex items-center justify-center">
+                      <span id="default-icon">
+                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20"><path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/></svg>
+                      </span>
+                      <span id="success-icon" class="hidden inline-flex items-center">
+                        <svg class="w-3.5 h-3.5 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                        </svg>
+                      </span>
+                    </button>
+                    <div :id="`tooltip-${index}`" role="tooltip"
+                         class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                      <span id="default-tooltip-message">Скопировать</span>
+                      <span id="success-tooltip-message" class="hidden">Скопировано!</span>
+                      <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </div>
       </section>
-
-      <section>
-        <h4>P.S.</h4>
-        <p>
-          Являясь всего лишь частью общей картины, предприниматели в сети интернет и по сей день остаются уделом
-          либералов, которые жаждут быть подвергнуты целой серии независимых исследований. Ясность нашей позиции
-          очевидна.
-        </p>
-      </section>
-
     </div>
 
   </main>
-
-  <footer>
-    <div></div>
-  </footer>
 
 </template>
 
@@ -226,7 +219,68 @@ p{
 }
 </style>
 
-<script lang="ts" setup>
+<script>
+import {CopyClipboard} from "flowbite";
+
+const $defaultIcon = document.getElementById('default-icon');
+const $successIcon = document.getElementById('success-icon');
+
+const $defaultTooltipMessage = document.getElementById('default-tooltip-message');
+const $successTooltipMessage = document.getElementById('success-tooltip-message');
+
+CopyClipboard.prototype.updateOnCopyCallback((clipboard) => {
+  showSuccess();
+  // reset to default state
+  setTimeout(() => {
+    resetToDefault();
+  }, 2000);
+})
+//
+// const showSuccess = () => {
+//   $defaultIcon.classList.add('hidden');
+//   $successIcon.classList.remove('hidden');
+//   $defaultTooltipMessage.classList.add('hidden');
+//   $successTooltipMessage.classList.remove('hidden');
+//   tooltip.show();
+// }
+//
+// const resetToDefault = () => {
+//   $defaultIcon.classList.remove('hidden');
+//   $successIcon.classList.add('hidden');
+//   $defaultTooltipMessage.classList.remove('hidden');
+//   $successTooltipMessage.classList.add('hidden');
+//   tooltip.hide();
+// }
+
+export default {
+  data(){
+    return {
+      subscriptions: [],
+      crypto: [
+        {
+          img: '/images/usdt-trc20.svg',
+          name: 'USDT (TRC20)',
+          value: 'TGsmcDZkUat5QZhWxzLjBGrqSVcX4WgaVM'
+        },
+        {
+          img: '/images/usdt-erc20.svg',
+          name: 'USDT (ERC20)',
+          value: '0xeca28b7fce200a35057ec2a2f78bd1420d922839'
+        },
+        {
+          img: '/images/btc.svg',
+          name: 'BTC',
+          value: '13jW3KNXXCzioh8dJyoQm7US8qc8jTgVd1'
+        },
+        {
+          img: '/images/eth.svg',
+          name: 'ETH',
+          value: '0xeca28b7fce200a35057ec2a2f78bd1420d922839'
+        },
+      ]
+    };
+  }
+}
 // import {usePaypalButton} from "#imports";
 //
 // usePaypalButton({

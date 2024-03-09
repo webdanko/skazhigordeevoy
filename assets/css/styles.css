@@ -15,15 +15,15 @@ section{
 	@apply text-center;
 }
 
-.subscription-button{
+.subscription-button, .onetime-button{
 	@apply relative flex justify-center items-center gap-2 rounded-xl p-5 mb-2;
 	@apply text-white font-light text-2xl;
-	@apply bg-gradient-to-br;
+	@apply bg-gradient-to-b;
 	@apply transition transition-all;
 	@apply shadow-md hover:shadow-sm;
 }
 
-.subscription-button svg{
+.subscription-button svg, .onetime-button svg{
 	@apply min-w-8 max-h-8;
 }
 
@@ -37,4 +37,22 @@ section{
 
 .subscription-button--youtube{
 	@apply shadow-youtube-900  bg-youtube-500 from-youtube-400/75 to-youtube-700/75;
+}
+
+.onetime{
+	@apply grid grid-cols-1 md:grid-cols-3 gap-3;
+}
+
+.onetime__item{
+	@apply text-center;
+}
+
+.onetime-button{
+	@apply min-h-24;
+}
+.onetime-button--telegram{
+	@apply shadow-telegram-800 bg-telegram-500 from-telegram-400/65 to-telegram-800/80;
+}
+.onetime-button--paypal{
+	@apply shadow-paypal-800 bg-paypal-600 from-paypal-400/20 to-paypal-950;
 }

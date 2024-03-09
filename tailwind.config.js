@@ -1,8 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
 const defaultTheme = require( "tailwindcss/defaultTheme" );
-const plugin = require( "tailwindcss/plugin.js" );
-// const colors = require('tailwindcss/colors');
 
 module.exports = {
 	content: [
@@ -12,6 +10,7 @@ module.exports = {
 		"./plugins/**/*.{js,ts}",
 		"./app.vue",
 		"./nuxt.config.{js,ts}",
+		"./node_modules/flowbite/**/*.{js,ts}"
 	],
 	theme: {
 		extend: {
@@ -68,11 +67,27 @@ module.exports = {
 					'900': '#920a0a',
 					'950': '#500000',
 				},
+				'paypal': {
+					'50': '#e0ecff',
+					'100': '#cce1ff',
+					'200': '#a8d4ff',
+					'300': '#75c3ff',
+					'400': '#38acff',
+					'500': '#0a91ff',
+					'600': '#007af5',
+					'700': '#006ef5',
+					'800': '#05359d',
+					'900': '#071c50',
+					'950': '#082054',
+				},
 			},
 			fontFamily: {
 				'sans': ['"Proxima Nova"', ...defaultTheme["fontFamily"].sans],
 				'serif': ['"Proxima Nova"', ...defaultTheme["fontFamily"].serif],
 			}
 		}
-	}
+	},
+	plugins: [
+		require('flowbite/plugin')
+	],
 };
