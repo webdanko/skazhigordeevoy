@@ -1,11 +1,40 @@
-.hero-block {
-  @apply aspect-[21/9] overflow-clip rounded-2xl;
+section{
+	@apply w-full mb-2;
 }
 
-.hero-block__bg {
-  width: 100%;
-  height: 100%;
-  background-image: url("~/assets/images/gordeeva.jpg");
-  background-position: 50% 50%;
-  background-size: cover;
+.disclaimer{
+	@apply p-2 leading-snug capitalize text-center text-lg md:text-xl font-mono md:rounded-2xl md:border-4 border-black;
+	@apply max-w-none;
+}
+
+.subscription{
+	@apply grid grid-cols-1 md:grid-cols-3 gap-3;
+}
+
+.subscription__item{
+	@apply text-center;
+}
+
+.subscription-button{
+	@apply relative flex justify-center items-center gap-2 rounded-xl p-5 mb-2;
+	@apply text-white font-light text-2xl;
+	@apply bg-gradient-to-br;
+	@apply transition transition-all;
+	@apply shadow-md hover:shadow-sm;
+}
+
+.subscription-button svg{
+	@apply min-w-8 max-h-8;
+}
+
+.subscription-button--boosty{
+	@apply shadow-boosty-900 bg-boosty-500 from-boosty-400/75 to-boosty-700/75;
+}
+
+.subscription-button--patreon{
+	@apply shadow-patreon-400  bg-patreon-800 from-patreon-800/75 to-patreon-900/75;
+}
+
+.subscription-button--youtube{
+	@apply shadow-youtube-900  bg-youtube-500 from-youtube-400/75 to-youtube-700/75;
 }
