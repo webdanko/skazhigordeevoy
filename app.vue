@@ -27,6 +27,7 @@ onMounted( () => {
     </div>
     <NuxtPicture
         src="/images/gordeeva_cover.png"
+        densities="x1 x2"
         :imgAttrs="{style:'min-height:80px;object-fit:scale-down;'}"
     />
   </header>
