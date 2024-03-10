@@ -1,26 +1,41 @@
 <script setup>
-import { onMounted } from 'vue'
-import { initFlowbite } from 'flowbite'
+import {onMounted} from 'vue'
+import {initFlowbite} from 'flowbite'
 
 // initialize components based on data attribute selectors
-onMounted(() => {
+onMounted( () => {
   initFlowbite();
-})
+} )
 </script>
 
 <template>
+
+  <header class="flex flex-col justify-center items-center bg-[#1f1f23]">
+    <div class="marquee-items-wrap font-mono text-xs md:text-sm text-gray-300">
+      <div class="marquee-items marquee">
+        <div class="marquee-item">
+          НАСТОЯЩИЙ МАТЕРИАЛ (ИНФОРМАЦИЯ) ПРОИЗВЕДЁН, РАСПРОСТРАНЁН ИНОСТРАННЫМ АГЕНТОМ КАТЕРИНОЙ ВЛАДИМИРОВНОЙ
+          ГОРДЕЕВОЙ, ЛИБО КАСАЕТСЯ ДЕЯТЕЛЬНОСТИ ИНОСТРАННОГО АГЕНТА КАТЕРИНЫ ВЛАДИМИРОВНЫ ГОРДЕЕВОЙ
+        </div>
+      </div>
+      <div aria-hidden="true" class="marquee-items marquee">
+        <div class="marquee-item">
+          НАСТОЯЩИЙ МАТЕРИАЛ (ИНФОРМАЦИЯ) ПРОИЗВЕДЁН, РАСПРОСТРАНЁН ИНОСТРАННЫМ АГЕНТОМ КАТЕРИНОЙ ВЛАДИМИРОВНОЙ
+          ГОРДЕЕВОЙ, ЛИБО КАСАЕТСЯ ДЕЯТЕЛЬНОСТИ ИНОСТРАННОГО АГЕНТА КАТЕРИНЫ ВЛАДИМИРОВНЫ ГОРДЕЕВОЙ
+        </div>
+      </div>
+    </div>
+    <NuxtPicture
+        src="/images/gordeeva_cover.png"
+        :imgAttrs="{style:'min-height:80px;object-fit:scale-down;'}"
+    />
+  </header>
 
   <main class="container max-w-screen-lg m-auto p-5">
 
     <div class="flex flex-col gap-5 md:gap-10 justify-center items-center">
 
-      <div class="disclaimer">
-          <span>НАСТОЯЩИЙ МАТЕРИАЛ (ИНФОРМАЦИЯ) ПРОИЗВЕДЁН, РАСПРОСТРАНЁН ИНОСТРАННЫМ АГЕНТОМ
-          КАТЕРИНОЙ ВЛАДИМИРОВНОЙ ГОРДЕЕВОЙ,
-          ЛИБО КАСАЕТСЯ ДЕЯТЕЛЬНОСТИ ИНОСТРАННОГО АГЕНТА КАТЕРИНЫ ВЛАДИМИРОВНЫ ГОРДЕЕВОЙ</span>
-      </div>
-
-      <div class="rounded-md md:rounded-2xl overflow-hidden">
+      <div class="hidden rounded-md md:rounded-2xl overflow-hidden">
         <NuxtPicture
             src="/images/gordeeva_cover.jpg"
             densities="x1 x2"
@@ -170,21 +185,28 @@ onMounted(() => {
             <li v-for="(account, index) in crypto">
               <div
                   class="flex flex-wrap gap-2 items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 hover:shadow">
-                <NuxtImg :src=account.img></NuxtImg>
-                <span class="md:w-1/6 shrink whitespace-nowrap">{{ account.name }}</span>
-                <div class="w-auto grow">
+                <div class="md:w-1/4">
+                  <NuxtImg :src=account.img></NuxtImg>
+                  <span class="md:w-1/6 shrink whitespace-nowrap">{{ account.name }}</span>
+                </div>
+                <div class="md:w-3/4">
                   <div class="relative">
                     <input :id="`crypto-${index}`" type="text"
-                           class="col-span-6 bg-gray-50 border border-gray-300 text-gray-500 text-sm truncate rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" :value=account.value disabled readonly>
+                           class="col-span-6 bg-gray-50 border border-gray-300 text-gray-500 text-sm truncate rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                           :value=account.value disabled readonly>
                     <button :data-copy-to-clipboard-target="`crypto-${index}`"
                             :data-tooltip-target="`tooltip-${index}`"
                             class="absolute end-2 top-1/2 -translate-y-1/2 text-gray-500 hover:bg-gray-100 rounded-lg p-2 inline-flex items-center justify-center">
                       <span id="default-icon">
-                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20"><path d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/></svg>
+                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                             fill="currentColor" viewBox="0 0 18 20"><path
+                            d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/></svg>
                       </span>
                       <span id="success-icon" class="hidden inline-flex items-center">
-                        <svg class="w-3.5 h-3.5 text-blue-700 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5.917 5.724 10.5 15 1.5"/>
+                        <svg class="w-3.5 h-3.5 text-blue-700 dark:text-blue-500" aria-hidden="true"
+                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M1 5.917 5.724 10.5 15 1.5"/>
                         </svg>
                       </span>
                     </button>
@@ -217,6 +239,47 @@ html{
 p{
   @apply mb-2;
 }
+
+.marquee-items-wrap{
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 20px;
+}
+
+.marquee-items{
+  flex-shrink: 0;
+  display: flex;
+  gap: 20px;
+  counter-reset: item;
+  justify-content: space-around;
+  min-width: 100%;
+}
+
+.marquee-item{
+  flex: 0 0 auto;
+  counter-increment: item;
+  border-radius: 6px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  transition: all 0.1s ease-in-out;
+}
+
+.marquee{
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(calc(-100% - 20px));
+  }
+}
 </style>
 
 <script>
@@ -224,6 +287,20 @@ export default {
   data(){
     return {
       subscriptions: [],
+      onetime: [
+        {
+          link: 'https://t.me/tribute/app?startapp=donation_3759',
+          code: 'telegram',
+          name: 'Tribute (Telegram)',
+          logo: '/images/telegram.svg'
+        },
+        {
+          link: 'https://www.paypal.me/katerinagordeeva',
+          code: 'paypal',
+          name: 'PayPal',
+          logo: '/images/paypal.svg'
+        },
+      ],
       crypto: [
         {
           img: '/images/usdt-trc20.svg',
