@@ -1,7 +1,15 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
-    modules: ["@nuxtjs/tailwindcss", "@nuxt/image", "@nuxtjs/fontaine", "nuxt-paypal"],
+    modules: [
+        "@nuxt/ui",
+        "@nuxt/image",
+        "@nuxtjs/fontaine",
+        "nuxt-paypal"
+    ],
+    colorMode: {
+        preference: 'light'
+    },
     app: {
         head: {
             title: 'Фандрайзинг – «Скажи Гордеевой»',
@@ -14,7 +22,7 @@ export default defineNuxtConfig({
                 {rel: "manifest", href: "/site.webmanifest"}
             ],
             script: [
-                {src:"https://www.paypalobjects.com/donate/sdk/donate-sdk.js", defer: true}
+                {src: "https://www.paypalobjects.com/donate/sdk/donate-sdk.js", defer: true}
             ]
         }
     },

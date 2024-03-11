@@ -16,7 +16,7 @@ section{
 }
 
 .subscription-button, .onetime-button{
-	@apply relative flex justify-center items-center gap-2 rounded-xl p-5 mb-2;
+	@apply relative flex justify-center items-center gap-2 h-full rounded-xl p-5 mb-2;
 	@apply text-white font-light text-2xl;
 	@apply bg-gradient-to-b;
 	@apply transition transition-all;
@@ -48,11 +48,13 @@ section{
 }
 
 .onetime-button{
-	@apply min-h-24;
+	/*@apply min-h-24;*/
 }
+
 .onetime-button--telegram{
 	@apply shadow-telegram-800 bg-telegram-500 from-telegram-400/65 to-telegram-800/80;
 }
+
 .onetime-button--paypal{
 	@apply shadow-paypal-800 bg-paypal-600 from-paypal-400/20 to-paypal-950;
 }

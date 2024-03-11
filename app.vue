@@ -28,7 +28,7 @@ onMounted( () => {
     <NuxtPicture
         src="/images/gordeeva_cover.png"
         densities="x1 x2"
-        :imgAttrs="{style:'min-height:80px;object-fit:scale-down;'}"
+        :imgAttrs="{style:'min-height:80px;object-fit:cover;'}"
     />
   </header>
 
@@ -95,7 +95,7 @@ onMounted( () => {
               </svg>
               <span>Boosty</span>
             </a>
-            <span class="bg-opacity-15 bg-white text-xs p-2">🇷🇺 Для российских карт</span>
+            <span class="text-xs p-2">🇷🇺 Для российских карт</span>
           </div>
           <div class="subscription__item">
             <a target="_blank" href="https://patreon.com/skazhigordeevoy"
@@ -107,7 +107,7 @@ onMounted( () => {
               </svg>
               <span>Patreon</span>
             </a>
-            <span class="bg-opacity-15 bg-white text-xs p-2">🌍 Для зарубежных карт</span>
+            <span class="text-xs p-2">🌍 Для зарубежных карт</span>
           </div>
           <div class="subscription__item">
             <a target="_blank" href="https://www.youtube.com/@skazhigordeevoy/join"
@@ -142,7 +142,7 @@ onMounted( () => {
                     d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z"
                     fill="#fff"/>
               </svg>
-              <span>Tribute (Telegram)</span>
+              <span>Tribute</span>
             </a>
           </div>
           <div class="onetime__item">
@@ -179,45 +179,19 @@ onMounted( () => {
             разработке кластеризации усилий.
           </p>
         </div>
-        <div class="w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-6">
-          <h5 class="mb-3 text-base font-semibold text-gray-900 md:text-xl">Доступные крипто-счета</h5>
-          <p class="text-sm font-normal text-gray-500">Кликните, чтобы скопировать номер счета в буфер обмена.</p>
+        <div class="w-full p-4 border border-gray-200 rounded-lg shadow sm:p-6">
+          <h5 class="mb-3 font-semibold md:text-xl">Доступные крипто-счета</h5>
+          <p class="text-sm">Кликните, чтобы скопировать номер счета в буфер обмена.</p>
           <ul class="my-4 space-y-3">
             <li v-for="(account, index) in crypto">
               <div
-                  class="flex flex-wrap gap-2 items-center p-3 text-base font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 hover:shadow">
-                <div class="md:w-1/4">
+                  class="flex flex-wrap flex-grow items-center p-3 font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 hover:shadow">
+                <div class="flex gap-2 items-center md:w-1/4 w-full">
                   <NuxtImg :src=account.img></NuxtImg>
-                  <span class="md:w-1/6 shrink whitespace-nowrap">{{ account.name }}</span>
+                  <span class="flex-grow whitespace-nowrap">{{ account.name }}</span>
                 </div>
-                <div class="md:w-3/4">
-                  <div class="relative">
-                    <input :id="`crypto-${index}`" type="text"
-                           class="col-span-6 bg-gray-50 border border-gray-300 text-gray-500 text-sm truncate rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                           :value=account.value disabled readonly>
-                    <button :data-copy-to-clipboard-target="`crypto-${index}`"
-                            :data-tooltip-target="`tooltip-${index}`"
-                            class="absolute end-2 top-1/2 -translate-y-1/2 text-gray-500 hover:bg-gray-100 rounded-lg p-2 inline-flex items-center justify-center">
-                      <span id="default-icon">
-                        <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                             fill="currentColor" viewBox="0 0 18 20"><path
-                            d="M16 1h-3.278A1.992 1.992 0 0 0 11 0H7a1.993 1.993 0 0 0-1.722 1H2a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2Zm-3 14H5a1 1 0 0 1 0-2h8a1 1 0 0 1 0 2Zm0-4H5a1 1 0 0 1 0-2h8a1 1 0 1 1 0 2Zm0-5H5a1 1 0 0 1 0-2h2V2h4v2h2a1 1 0 1 1 0 2Z"/></svg>
-                      </span>
-                      <span id="success-icon" class="hidden inline-flex items-center">
-                        <svg class="w-3.5 h-3.5 text-blue-700 dark:text-blue-500" aria-hidden="true"
-                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 12">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5.917 5.724 10.5 15 1.5"/>
-                        </svg>
-                      </span>
-                    </button>
-                    <div :id="`tooltip-${index}`" role="tooltip"
-                         class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                      <span id="default-tooltip-message">Скопировать</span>
-                      <span id="success-tooltip-message" class="hidden">Скопировано!</span>
-                      <div class="tooltip-arrow" data-popper-arrow></div>
-                    </div>
-                  </div>
+                <div class="grow w-auto">
+                  <CopyInput :value=account.value></CopyInput>
                 </div>
               </div>
             </li>
