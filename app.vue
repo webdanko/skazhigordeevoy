@@ -186,12 +186,12 @@ onMounted( () => {
             <li v-for="(account, index) in crypto">
               <div
                   class="flex flex-wrap flex-grow items-center p-3 font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 hover:shadow">
-                <div class="flex gap-2 items-center md:w-1/4 w-full">
-                  <NuxtImg :src=account.img></NuxtImg>
+                <div class="flex items-center md:w-1/4 w-full">
+                  <NuxtImg :src=account.img class="p-2"></NuxtImg>
                   <span class="flex-grow whitespace-nowrap">{{ account.name }}</span>
                 </div>
                 <div class="grow w-auto">
-                  <CopyInput :value=account.value></CopyInput>
+                  <CopyInput :input-value=account.value></CopyInput>
                 </div>
               </div>
             </li>

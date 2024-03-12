@@ -30,6 +30,7 @@ export default defineNuxtConfig({
         '~/assets/fonts/proxima/stylesheet.css',
     ],
     image: {},
+    components: true,
     paypal: {
         clientId: 'ASwuhBpJqSczQIY1cCD2qd3AgJ1KZ0amTiQYfvm7UsZlxpgxiD7REnt4on2kCwxgiU52bhDRiumgRI70',
     },
