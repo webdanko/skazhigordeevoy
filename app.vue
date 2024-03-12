@@ -27,28 +27,28 @@ onMounted( () => {
     </div>
     <NuxtPicture src="/images/gordeeva_cover.png"
                  fit="cover"
-                 preload
                  loading="lazy"
-                 :placeholder="[50, 25, 75, 5]"
-                 :imgAttrs="{style:'min-height:80px;'}" />
+                 preload
+                 :imgAttrs="{style:'min-height:80px; object-fit:cover;'}" />
   </header>
 
   <main class="container max-w-screen-lg m-auto p-5">
 
     <div class="flex flex-col gap-5 md:gap-10 justify-center items-center">
 
-      <div class="hidden rounded-md md:rounded-2xl overflow-hidden">
-        <NuxtPicture
-            src="/images/gordeeva_cover.jpg"
-            densities="x1 x2"
-            sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
-        />
-      </div>
+      <!--      <div class="hidden rounded-md md:rounded-2xl overflow-hidden">-->
+      <!--        <NuxtPicture-->
+      <!--            src="/images/gordeeva_cover.jpg"-->
+      <!--            densities="x1 x2"-->
+      <!--            sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"-->
+      <!--        />-->
+      <!--      </div>-->
 
       <section class="max-w-screen-md">
         <h2 class="font-bold text-3xl leading-tight mb-8">Всем привет, это «Скажи Гордеевой»!</h2>
         <div class="border-l-2 pl-5">
-          <p>Наша маленькая творческая артель рассказывает о людях, которые живут рядом с нами: известных и не очень (с такими мы вас знакомили).</p>
+          <p>Наша маленькая творческая артель рассказывает о людях, которые живут рядом с нами: известных и не очень (с
+            такими мы вас знакомили).</p>
           <p>Мы всегда верили в то, что внимательное слушание и бережное отношение дают человеку возможность больше
             рассказать о себе и быть лучше понятым.</p>
           <p>Мы всегда придерживались принципов финансовой независимости: нашими партнерами были самые классные
@@ -70,7 +70,8 @@ onMounted( () => {
                href="mailto:anlyalin@gmail.com">anlyalin@gmail.com</a> ). Но, как минимум, на первых порах
             нам будет нужна ваша помощь.</p>
 
-          <p>Поэтому мы создали все популярные деньгособирательные платформы в надежде, что вы нас поймёте и поддержите.</p>
+          <p>Поэтому мы создали все популярные деньгособирательные платформы в надежде, что вы нас поймёте и
+            поддержите.</p>
           <p>Спасибо огромное 💙</p>
         </div>
       </section>

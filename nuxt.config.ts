@@ -30,7 +30,6 @@ export default defineNuxtConfig({
         }
     },
     image: {
-        densities: [1, 2, 3],
         screens: {
             xs: 620,
             sm: 768,
@@ -38,7 +37,9 @@ export default defineNuxtConfig({
             lg: 1280,
             xl: 1536,
             xxl: 1536,
-            "2xl": 1536
+            "2xl": 1536,
+            xxxl: 3072,
+            "3xl": 3072
         },
     },
     components: true,
