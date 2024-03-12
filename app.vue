@@ -10,7 +10,7 @@ onMounted( () => {
 
 <template>
 
-  <header class="flex flex-col justify-center items-center bg-[#1f1f23]">
+  <header class="flex flex-col justify-center items-center mb-8 bg-[#1f1f23]">
     <div class="marquee-items-wrap font-mono text-xs md:text-sm text-gray-300">
       <div class="marquee-items marquee">
         <div class="marquee-item">
@@ -66,8 +66,9 @@ onMounted( () => {
             от вас хватит любви и внимания.</p>
           <p>Надеемся, у нас получится сотрудничать с брендами и компаниями, не связанными с российским
             законодательством, возможно, найдутся ещё какие-то идеи для сотрудничества (если они у вас есть, пишите на
-            <a target="_blank" href="mailto:skazhiskazhi@gmail.com">skazhiskazhi@gmail.com</a> ). Но, как минимум, на
-            первых порах нам будет нужна ваша помощь.</p>
+            <a target="_blank" class="font-mono border border-dashed rounded-lg py-1 px-1 bg-boosty-50"
+               href="mailto:skazhiskazhi@gmail.com">skazhiskazhi@gmail.com</a> ). Но, как минимум, на первых порах
+            нам будет нужна ваша помощь.</p>
 
           <p>Поэтому мы создали все популярные деньгособирательные платформы в надежде, что вы нас поймёте и поддержите.</p>
           <p>Спасибо огромное 💙</p>
