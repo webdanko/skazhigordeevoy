@@ -2,10 +2,8 @@
 
 export default defineNuxtConfig({
     modules: [
-        "@nuxt/ui",
-        "@nuxt/image",
-        "@nuxtjs/fontaine",
-        "nuxt-paypal"
+        '@nuxtjs/tailwindcss',
+        '@nuxt/image',
     ],
     colorMode: {
         preference: 'light'
@@ -21,31 +19,10 @@ export default defineNuxtConfig({
                 {rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16x16.png"},
                 {rel: "manifest", href: "/site.webmanifest"}
             ],
-            script: [
-                {src: "https://www.paypalobjects.com/donate/sdk/donate-sdk.js", defer: true}
-            ],
+            script: [],
             css: [
                 '~/assets/fonts/proxima/stylesheet.css',
             ]
         }
     },
-    components: true,
-    images: {
-        screens: {
-            xs: 320,
-            sm: 640,
-            md: 768,
-            lg: 1024,
-            xl: 1280,
-            xxl: 1536,
-            "2xl": 1536,
-            "3xl": 2560,
-            "4xl": 3840,
-            "5xl": 4096,
-        }
-    },
-    paypal: {
-        clientId: 'ASwuhBpJqSczQIY1cCD2qd3AgJ1KZ0amTiQYfvm7UsZlxpgxiD7REnt4on2kCwxgiU52bhDRiumgRI70',
-    },
-    devtools: {enabled: true}
 })

@@ -10,42 +10,38 @@ onMounted( () => {
 
 <template>
 
-  <header class="flex flex-col justify-center items-center mb-8 bg-[#1f1f23]">
-    <div class="marquee-items-wrap font-mono text-xs md:text-sm text-gray-300">
-      <div class="marquee-items marquee">
-        <div class="marquee-item">
-          18+ НАСТОЯЩИЙ МАТЕРИАЛ (ИНФОРМАЦИЯ) ПРОИЗВЕДЕН, РАСПРОСТРАНЕН ИНОСТРАННЫМ АГЕНТОМ КАТЕРИНОЙ ВЛАДИМИРОВНОЙ
-          ГОРДЕЕВОЙ
-        </div>
-      </div>
-      <div aria-hidden="true" class="marquee-items marquee">
-        <div class="marquee-item">
-          18+ НАСТОЯЩИЙ МАТЕРИАЛ (ИНФОРМАЦИЯ) ПРОИЗВЕДЕН, РАСПРОСТРАНЕН ИНОСТРАННЫМ АГЕНТОМ КАТЕРИНОЙ ВЛАДИМИРОВНОЙ
-          ГОРДЕЕВОЙ
-        </div>
+  <div class="marquee-items-wrap font-mono text-md md:text-2xl text-gray-300 !sticky top-0 z-10 bg-[#1f1f23]">
+    <div class="marquee-items marquee">
+      <div class="marquee-item">
+        18+ НАСТОЯЩИЙ МАТЕРИАЛ (ИНФОРМАЦИЯ) ПРОИЗВЕДЕН, РАСПРОСТРАНЕН ИНОСТРАННЫМ АГЕНТОМ КАТЕРИНОЙ ВЛАДИМИРОВНОЙ
+        ГОРДЕЕВОЙ
       </div>
     </div>
+    <div aria-hidden="true" class="marquee-items marquee">
+      <div class="marquee-item">
+        18+ НАСТОЯЩИЙ МАТЕРИАЛ (ИНФОРМАЦИЯ) ПРОИЗВЕДЕН, РАСПРОСТРАНЕН ИНОСТРАННЫМ АГЕНТОМ КАТЕРИНОЙ ВЛАДИМИРОВНОЙ
+        ГОРДЕЕВОЙ
+      </div>
+    </div>
+  </div>
+
+  <header class="flex flex-col justify-center items-center md:mb-8 bg-[#1f1f23]">
+    <div class="!hidden max-w-screen-sm p-2">
+      <p class="font-mono text-center text-md md:text-lg text-gray-300">
+        18+ НАСТОЯЩИЙ МАТЕРИАЛ (ИНФОРМАЦИЯ) ПРОИЗВЕДЕН, РАСПРОСТРАНЕН ИНОСТРАННЫМ АГЕНТОМ КАТЕРИНОЙ ВЛАДИМИРОВНОЙ
+        ГОРДЕЕВОЙ
+      </p>
+    </div>
+<!--    sizes="xs:640px sm:760px md:1024px lg:1280px xl:1536px '2xl':1920px '3xl':3072px"-->
     <NuxtPicture src="/images/gordeeva_cover.png"
-                 densities="x1"
-                 sizes="320px xs:640px sm:760px md:1024px lg:1280px xl:1536px xxl:1920px 3xl:3072px"
-                 fit="cover"
-                 loading="lazy"
-                 preload
-                 placeholder
-                 :imgAttrs="{style:'min-height:80px; object-fit:cover;'}" />
+                 densities="x1 x2"
+                 sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
+                 :imgAttrs="{style:'min-height:80px; object-fit:cover;'}"/>
   </header>
 
   <main class="container max-w-screen-lg m-auto p-5">
 
     <div class="flex flex-col gap-5 md:gap-10 justify-center items-center">
-
-      <!--      <div class="hidden rounded-md md:rounded-2xl overflow-hidden">-->
-      <!--        <NuxtPicture-->
-      <!--            src="/images/gordeeva_cover.jpg"-->
-      <!--            densities="x1 x2"-->
-      <!--            sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"-->
-      <!--        />-->
-      <!--      </div>-->
 
       <section class="max-w-screen-md">
         <h2 class="font-bold text-3xl leading-tight mb-8">Всем привет, это «Скажи Гордеевой»!</h2>
