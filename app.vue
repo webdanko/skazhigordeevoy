@@ -27,10 +27,11 @@ onMounted( () => {
     </div>
     <NuxtPicture src="/images/gordeeva_cover.png"
                  densities="x1"
-                 sizes="320px xs:640px sm:760px md:1024px lg:1280px xl:1536px xxl:1920px"
+                 sizes="320px xs:640px sm:760px md:1024px lg:1280px xl:1536px xxl:1920px 3xl:3072px"
                  fit="cover"
                  loading="lazy"
                  preload
+                 placeholder
                  :imgAttrs="{style:'min-height:80px; object-fit:cover;'}" />
   </header>
 
