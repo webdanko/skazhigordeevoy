@@ -32,11 +32,12 @@ onMounted( () => {
         ГОРДЕЕВОЙ
       </p>
     </div>
-<!--    sizes="xs:640px sm:760px md:1024px lg:1280px xl:1536px '2xl':1920px '3xl':3072px"-->
+    <!--    sizes=""-->
     <NuxtPicture src="/images/gordeeva_cover.png"
+                 class="cover"
                  densities="x1 x2"
-                 sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
-                 :imgAttrs="{style:'min-height:80px; object-fit:cover;'}"/>
+                 sizes="xs:640px sm:760px md:1024px lg:1280px xl:1536px '2xl':1920px '3xl':3072px"
+                 :imgAttrs="{class:'cover__image'}"/>
   </header>
 
   <main class="container max-w-screen-lg m-auto p-5">
@@ -80,7 +81,7 @@ onMounted( () => {
       <section>
         <h3 class="font-bold text-3xl text-left leading-tight mb-8">Регулярные пожертвования</h3>
         <div class="border-l-2 pl-5 mb-8">
-          <p>Подписка -- самый простой и самый предпочтительный способ нас поддержать. Вам не нужно каждый раз вводить
+          <p>Подписка — самый простой и самый предпочтительный способ нас поддержать. Вам не нужно каждый раз вводить
             данные карты, а мы сможем планировать нашу работу более, чем на неделю вперед. </p>
         </div>
         <div class="subscription">
