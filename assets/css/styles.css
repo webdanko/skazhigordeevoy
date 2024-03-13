@@ -18,6 +18,12 @@ section{
 	}
 }
 
+@screen lg{
+	.cover__image{
+		@apply min-h-40;
+	}
+}
+
 .disclaimer{
 	@apply p-2 leading-snug capitalize text-center text-lg md:text-xl font-mono md:rounded-2xl md:border-4 border-black;
 	@apply max-w-none;
