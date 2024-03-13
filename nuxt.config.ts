@@ -30,6 +30,20 @@ export default defineNuxtConfig({
         }
     },
     components: true,
+    images: {
+        screens: {
+            'xs': 320,
+            'sm': 640,
+            'md': 768,
+            'lg': 1024,
+            'xl': 1280,
+            'xxl': 1536,
+            '2xl': 1920,
+            '3xl': 2560,
+            '4xl': 3840,
+            '5xl': 4096,
+        }
+    },
     paypal: {
         clientId: 'ASwuhBpJqSczQIY1cCD2qd3AgJ1KZ0amTiQYfvm7UsZlxpgxiD7REnt4on2kCwxgiU52bhDRiumgRI70',
     },
