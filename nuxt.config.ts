@@ -32,16 +32,16 @@ export default defineNuxtConfig({
     components: true,
     images: {
         screens: {
-            'xs': 320,
-            'sm': 640,
-            'md': 768,
-            'lg': 1024,
-            'xl': 1280,
-            'xxl': 1536,
-            '2xl': 1920,
-            '3xl': 2560,
-            '4xl': 3840,
-            '5xl': 4096,
+            'xs':  1,
+            'sm':  1,
+            'md':  1,
+            'lg':  14,
+            'xl':  10,
+            'xxl': 136,
+            '2xl': 120,
+            '3xl': 160,
+            '4xl': 140,
+            '5xl': 196,
         }
     },
     paypal: {

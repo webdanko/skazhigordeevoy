@@ -26,7 +26,7 @@ onMounted( () => {
       </div>
     </div>
     <NuxtPicture src="/images/gordeeva_cover.png"
-                 sizes="320, 640, 768, 1024, 1280, 1536, 1920, 2560, 3840, 4096"
+                 sizes="320, 640, 768, 1024, 1280, 1536, 1920, 2560"
                  fit="cover"
                  loading="lazy"
                  preload
