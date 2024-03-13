@@ -26,6 +26,7 @@ onMounted( () => {
       </div>
     </div>
     <NuxtPicture src="/images/gordeeva_cover.png"
+                 sizes="100vw xs:100vw sm:100vw md:100vw lg:100vw xl:100vw"
                  fit="cover"
                  loading="lazy"
                  preload
