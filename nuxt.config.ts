@@ -29,19 +29,6 @@ export default defineNuxtConfig({
             ]
         }
     },
-    image: {
-        screens: {
-            xs: 620,
-            sm: 768,
-            md: 1024,
-            lg: 1280,
-            xl: 1536,
-            xxl: 1536,
-            "2xl": 1536,
-            xxxl: 3072,
-            "3xl": 3072
-        },
-    },
     components: true,
     paypal: {
         clientId: 'ASwuhBpJqSczQIY1cCD2qd3AgJ1KZ0amTiQYfvm7UsZlxpgxiD7REnt4on2kCwxgiU52bhDRiumgRI70',
