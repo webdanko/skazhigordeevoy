@@ -279,11 +279,11 @@ export default {
         },
       ],
       crypto: [
-        {
-          img: '/images/usdt-trc20.svg',
-          name: 'USDT (TRC20)',
-          value: 'TGsmcDZkUat5QZhWxzLjBGrqSVcX4WgaVM'
-        },
+        // {
+        //   img: '/images/usdt-trc20.svg',
+        //   name: 'USDT (TRC20)',
+        //   value: 'TGsmcDZkUat5QZhWxzLjBGrqSVcX4WgaVM'
+        // },
         {
           img: '/images/usdt-erc20.svg',
           name: 'USDT (ERC20)',
