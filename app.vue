@@ -279,25 +279,25 @@ export default {
         },
       ],
       crypto: [
-        // {
-        //   img: '/images/usdt-trc20.svg',
-        //   name: 'USDT (TRC20)',
-        //   value: 'TGsmcDZkUat5QZhWxzLjBGrqSVcX4WgaVM'
-        // },
+        {
+          img: '/images/usdt-trc20.svg',
+          name: 'USDT (TRC20)',
+          value: 'TVgBMQpbaMS5ahWUK9j43pJaNZRTKd8QwU'
+        },
         {
           img: '/images/usdt-erc20.svg',
           name: 'USDT (ERC20)',
-          value: '0xeca28b7fce200a35057ec2a2f78bd1420d922839'
+          value: '0x39e7769787be2b84ad5a955d53f4b80c39a93be0'
         },
         {
           img: '/images/btc.svg',
           name: 'BTC',
-          value: '13jW3KNXXCzioh8dJyoQm7US8qc8jTgVd1'
+          value: '1DeRAzcsMPrxjyRbHKoPuYrnPtgjeT2BoS'
         },
         {
           img: '/images/eth.svg',
-          name: 'ETH',
-          value: '0xeca28b7fce200a35057ec2a2f78bd1420d922839'
+          name: 'ETH (ERC20)',
+          value: '0x39e7769787be2b84ad5a955d53f4b80c39a93be0'
         },
       ]
     };
