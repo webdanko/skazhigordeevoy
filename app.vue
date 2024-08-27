@@ -42,14 +42,8 @@
 </template>
 
 <script setup>
-  import { initFlowbite } from 'flowbite'
-
   useHead({
     title: 'Фандрайзинг – «Скажи Гордеевой»'
-  })
-
-  onMounted(() => {
-    initFlowbite();
   })
 </script>
 

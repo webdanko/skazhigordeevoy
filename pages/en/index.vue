@@ -226,14 +226,7 @@
 </template>
 
 <script setup>
-    const switchLocalePath = useSwitchLocalePath()
-    const { t, locale, locales, setLocale } = useI18n()
     const globalStore = useGlobalStore()
-    const switchLocale = (newLocale) => {
-        setLocale(newLocale)
-        // Обновляем cookie для сохранения локали
-        document.cookie = `i18n=${newLocale}; path=/`
-    }
     useSeoMeta({
         title: "Fundraising – youtube-project «Tell Gordeeva»"
     })
