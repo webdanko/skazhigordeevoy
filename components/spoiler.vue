@@ -1,12 +1,15 @@
 <script setup lang="ts">
-defineProps({
-  title: {
-    type: String, required: true
-  },
-  show: {
-    type: Boolean, default: false
-  }
-})
+  defineProps({
+    title: {
+      type: String, required: true
+    },
+    collapseText: {
+      type: String, default: 'Свернуть'
+    },
+    show: {
+      type: Boolean, default: false
+    }
+  })
 </script>
 
 <template>
@@ -14,8 +17,11 @@ defineProps({
     'spoiler': true,
     'show': show
   }">
-    <h4 :class="['spoiler__title']" @click="show = !show">
-      {{ show ? 'Свернуть' : title }}
+    <h4
+      :class="['spoiler__title']"
+      @click="show = !show"
+    >
+      {{ show ? collapseText : title }}
     </h4>
     <div class="spoiler__content">
       <slot></slot>
@@ -24,20 +30,20 @@ defineProps({
 </template>
 
 <style scoped lang="postcss">
-.spoiler{
-  @apply border-2 border-dashed rounded-2xl p-2 mb-8 overflow-hidden;
-}
+  .spoiler {
+    @apply border-2 border-dashed rounded-2xl p-2 mb-8 overflow-hidden;
+  }
 
-.spoiler .spoiler__title{
-  @apply rounded-xl bg-gray-100 font-bold text-center p-4;
-}
+  .spoiler .spoiler__title {
+    @apply rounded-xl bg-gray-100 font-bold text-center p-4;
+  }
 
-.spoiler .spoiler__content{
-  @apply h-0 p-2 hidden;
-  transition: height 300ms ease-in-out;
-}
+  .spoiler .spoiler__content {
+    @apply h-0 p-2 hidden;
+    transition: height 300ms ease-in-out;
+  }
 
-.spoiler.show .spoiler__content{
-  @apply block h-auto;
-}
+  .spoiler.show .spoiler__content {
+    @apply block h-auto;
+  }
 </style>
